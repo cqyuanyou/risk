@@ -33,7 +33,7 @@ class ChuanglanGateway extends Gateway
     const ENDPOINT_URL_TEMPLATE = 'https://%s.253.com/msg/send/json';
 
     /**
-     * 国际短信
+     * 国际短信com
      */
     const INT_URL = 'http://intapi.253.com/send/json';
 

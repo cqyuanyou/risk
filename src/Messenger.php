@@ -25,16 +25,16 @@ class Messenger
     const STATUS_FAILURE = 'failure';
 
     /**
-     * @var \Yuanyou\Risk\Sms
+     * @var \Yuanyou\Risk\SmsService
      */
     protected $easySms;
 
     /**
      * Messenger constructor.
      *
-     * @param \Yuanyou\Risk\Sms $easySms
+     * @param \Yuanyou\Risk\SmsService $easySms
      */
-    public function __construct(Sms $easySms)
+    public function __construct(SmsService $easySms)
     {
         $this->easySms = $easySms;
     }
