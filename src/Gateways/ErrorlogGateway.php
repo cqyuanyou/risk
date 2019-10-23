@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Gateways;
+namespace Yuanyou\Risk\Gateways;
 
-use Yuanyou\EasySms\Contracts\MessageInterface;
-use Yuanyou\EasySms\Contracts\PhoneNumberInterface;
-use Yuanyou\EasySms\Support\Config;
+use Yuanyou\Risk\Contracts\MessageInterface;
+use Yuanyou\Risk\Contracts\PhoneNumberInterface;
+use Yuanyou\Risk\Support\Config;
 
 /**
  * Class ErrorlogGateway.
@@ -21,9 +21,9 @@ use Yuanyou\EasySms\Support\Config;
 class ErrorlogGateway extends Gateway
 {
     /**
-     * @param \Yuanyou\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Yuanyou\EasySms\Contracts\MessageInterface     $message
-     * @param \Yuanyou\EasySms\Support\Config                 $config
+     * @param \Yuanyou\Risk\Contracts\PhoneNumberInterface $to
+     * @param \Yuanyou\Risk\Contracts\MessageInterface     $message
+     * @param \Yuanyou\Risk\Support\Config                 $config
      *
      * @return array
      */

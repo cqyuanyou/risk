@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Gateways;
+namespace Yuanyou\Risk\Gateways;
 
-use Yuanyou\EasySms\Contracts\GatewayInterface;
-use Yuanyou\EasySms\Support\Config;
+use Yuanyou\Risk\Contracts\GatewayInterface;
+use Yuanyou\Risk\Support\Config;
 
 /**
  * Class Gateway.
@@ -22,7 +22,7 @@ abstract class Gateway implements GatewayInterface
     const DEFAULT_TIMEOUT = 5.0;
 
     /**
-     * @var \Yuanyou\EasySms\Support\Config
+     * @var \Yuanyou\Risk\Support\Config
      */
     protected $config;
 
@@ -66,7 +66,7 @@ abstract class Gateway implements GatewayInterface
     }
 
     /**
-     * @return \Yuanyou\EasySms\Support\Config
+     * @return \Yuanyou\Risk\Support\Config
      */
     public function getConfig()
     {
@@ -74,7 +74,7 @@ abstract class Gateway implements GatewayInterface
     }
 
     /**
-     * @param \Yuanyou\EasySms\Support\Config $config
+     * @param \Yuanyou\Risk\Support\Config $config
      *
      * @return $this
      */

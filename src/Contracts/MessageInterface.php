@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Contracts;
+namespace Yuanyou\Risk\Contracts;
 
 /**
  * Interface MessageInterface.
@@ -30,7 +30,7 @@ interface MessageInterface
     /**
      * Return message content.
      *
-     * @param \Yuanyou\EasySms\Contracts\GatewayInterface|null $gateway
+     * @param \Yuanyou\Risk\Contracts\GatewayInterface|null $gateway
      *
      * @return string
      */
@@ -39,7 +39,7 @@ interface MessageInterface
     /**
      * Return the template id of message.
      *
-     * @param \Yuanyou\EasySms\Contracts\GatewayInterface|null $gateway
+     * @param \Yuanyou\Risk\Contracts\GatewayInterface|null $gateway
      *
      * @return string
      */
@@ -48,7 +48,7 @@ interface MessageInterface
     /**
      * Return the template data of message.
      *
-     * @param \Yuanyou\EasySms\Contracts\GatewayInterface|null $gateway
+     * @param \Yuanyou\Risk\Contracts\GatewayInterface|null $gateway
      *
      * @return array
      */

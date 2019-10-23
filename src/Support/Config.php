@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Support;
+namespace Yuanyou\Risk\Support;
 
 use ArrayAccess;
 

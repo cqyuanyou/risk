@@ -3,11 +3,11 @@
 namespace App\Gateways;
 
 use App\Traits\ResultTrait;
-use Yuanyou\EasySms\Contracts\MessageInterface;
-use Yuanyou\EasySms\Contracts\PhoneNumberInterface;
-use Yuanyou\EasySms\Gateways\Gateway;
-use Yuanyou\EasySms\Support\Config;
-use Yuanyou\EasySms\Traits\HasHttpRequest;
+use Yuanyou\Risk\Contracts\MessageInterface;
+use Yuanyou\Risk\Contracts\PhoneNumberInterface;
+use Yuanyou\Risk\Gateways\Gateway;
+use Yuanyou\Risk\Support\Config;
+use Yuanyou\Risk\Traits\HasHttpRequest;
 
 class SmsGateway extends Gateway
 {
@@ -29,9 +29,9 @@ class SmsGateway extends Gateway
     /**
      * Send a short message.
      *
-     * @param \Yuanyou\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Yuanyou\EasySms\Contracts\MessageInterface $message
-     * @param \Yuanyou\EasySms\Support\Config $config
+     * @param \Yuanyou\Risk\Contracts\PhoneNumberInterface $to
+     * @param \Yuanyou\Risk\Contracts\MessageInterface $message
+     * @param \Yuanyou\Risk\Support\Config $config
      *
      * @return array
      */

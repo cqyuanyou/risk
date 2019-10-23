@@ -9,16 +9,16 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms;
+namespace Yuanyou\Risk;
 
 use Closure;
-use Yuanyou\EasySms\Contracts\GatewayInterface;
-use Yuanyou\EasySms\Contracts\MessageInterface;
-use Yuanyou\EasySms\Contracts\PhoneNumberInterface;
-use Yuanyou\EasySms\Contracts\StrategyInterface;
-use Yuanyou\EasySms\Exceptions\InvalidArgumentException;
-use Yuanyou\EasySms\Strategies\OrderStrategy;
-use Yuanyou\EasySms\Support\Config;
+use Yuanyou\Risk\Contracts\GatewayInterface;
+use Yuanyou\Risk\Contracts\MessageInterface;
+use Yuanyou\Risk\Contracts\PhoneNumberInterface;
+use Yuanyou\Risk\Contracts\StrategyInterface;
+use Yuanyou\Risk\Exceptions\InvalidArgumentException;
+use Yuanyou\Risk\Strategies\OrderStrategy;
+use Yuanyou\Risk\Support\Config;
 use RuntimeException;
 
 /**
@@ -27,7 +27,7 @@ use RuntimeException;
 class Sms
 {
     /**
-     * @var \Yuanyou\EasySms\Support\Config
+     * @var \Yuanyou\Risk\Support\Config
      */
     protected $config;
 
@@ -47,7 +47,7 @@ class Sms
     protected $gateways = [];
 
     /**
-     * @var \Yuanyou\EasySms\Messenger
+     * @var \Yuanyou\Risk\Messenger
      */
     protected $messenger;
 
@@ -74,13 +74,13 @@ class Sms
      * Send a message.
      *
      * @param string|array                                       $to
-     * @param \Yuanyou\EasySms\Contracts\MessageInterface|array $message
+     * @param \Yuanyou\Risk\Contracts\MessageInterface|array $message
      * @param array                                              $gateways
      *
      * @return array
      *
-     * @throws \Yuanyou\EasySms\Exceptions\InvalidArgumentException
-     * @throws \Yuanyou\EasySms\Exceptions\NoGatewayAvailableException
+     * @throws \Yuanyou\Risk\Exceptions\InvalidArgumentException
+     * @throws \Yuanyou\Risk\Exceptions\NoGatewayAvailableException
      */
     public function send($to, $message, array $gateways = [])
     {
@@ -100,9 +100,9 @@ class Sms
      *
      * @param string|null $name
      *
-     * @return \Yuanyou\EasySms\Contracts\GatewayInterface
+     * @return \Yuanyou\Risk\Contracts\GatewayInterface
      *
-     * @throws \Yuanyou\EasySms\Exceptions\InvalidArgumentException
+     * @throws \Yuanyou\Risk\Exceptions\InvalidArgumentException
      */
     public function gateway($name = null)
     {
@@ -120,9 +120,9 @@ class Sms
      *
      * @param string|null $strategy
      *
-     * @return \Yuanyou\EasySms\Contracts\StrategyInterface
+     * @return \Yuanyou\Risk\Contracts\StrategyInterface
      *
-     * @throws \Yuanyou\EasySms\Exceptions\InvalidArgumentException
+     * @throws \Yuanyou\Risk\Exceptions\InvalidArgumentException
      */
     public function strategy($strategy = null)
     {
@@ -161,7 +161,7 @@ class Sms
     }
 
     /**
-     * @return \Yuanyou\EasySms\Support\Config
+     * @return \Yuanyou\Risk\Support\Config
      */
     public function getConfig()
     {
@@ -199,7 +199,7 @@ class Sms
     }
 
     /**
-     * @return \Yuanyou\EasySms\Messenger
+     * @return \Yuanyou\Risk\Messenger
      */
     public function getMessenger()
     {
@@ -215,7 +215,7 @@ class Sms
      *
      * @return GatewayInterface
      *
-     * @throws \Yuanyou\EasySms\Exceptions\InvalidArgumentException
+     * @throws \Yuanyou\Risk\Exceptions\InvalidArgumentException
      */
     protected function createGateway($name)
     {
@@ -239,9 +239,9 @@ class Sms
      * @param string $gateway
      * @param array  $config
      *
-     * @return \Yuanyou\EasySms\Contracts\GatewayInterface
+     * @return \Yuanyou\Risk\Contracts\GatewayInterface
      *
-     * @throws \Yuanyou\EasySms\Exceptions\InvalidArgumentException
+     * @throws \Yuanyou\Risk\Exceptions\InvalidArgumentException
      */
     protected function makeGateway($gateway, $config)
     {
@@ -283,9 +283,9 @@ class Sms
     }
 
     /**
-     * @param string|\Yuanyou\EasySms\Contracts\PhoneNumberInterface $number
+     * @param string|\Yuanyou\Risk\Contracts\PhoneNumberInterface $number
      *
-     * @return \Yuanyou\EasySms\PhoneNumber
+     * @return \Yuanyou\Risk\PhoneNumber
      */
     protected function formatPhoneNumber($number)
     {
@@ -297,9 +297,9 @@ class Sms
     }
 
     /**
-     * @param array|string|\Yuanyou\EasySms\Contracts\MessageInterface $message
+     * @param array|string|\Yuanyou\Risk\Contracts\MessageInterface $message
      *
-     * @return \Yuanyou\EasySms\Contracts\MessageInterface
+     * @return \Yuanyou\Risk\Contracts\MessageInterface
      */
     protected function formatMessage($message)
     {
@@ -322,7 +322,7 @@ class Sms
      *
      * @return array
      *
-     * @throws \Yuanyou\EasySms\Exceptions\InvalidArgumentException
+     * @throws \Yuanyou\Risk\Exceptions\InvalidArgumentException
      */
     protected function formatGateways(array $gateways)
     {

@@ -9,13 +9,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Gateways;
+namespace Yuanyou\Risk\Gateways;
 
-use Yuanyou\EasySms\Contracts\MessageInterface;
-use Yuanyou\EasySms\Contracts\PhoneNumberInterface;
-use Yuanyou\EasySms\Exceptions\GatewayErrorException;
-use Yuanyou\EasySms\Support\Config;
-use Yuanyou\EasySms\Traits\HasHttpRequest;
+use Yuanyou\Risk\Contracts\MessageInterface;
+use Yuanyou\Risk\Contracts\PhoneNumberInterface;
+use Yuanyou\Risk\Exceptions\GatewayErrorException;
+use Yuanyou\Risk\Support\Config;
+use Yuanyou\Risk\Traits\HasHttpRequest;
 
 /**
  * Class AvatardataGateway.

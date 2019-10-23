@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Contracts;
+namespace Yuanyou\Risk\Contracts;
 
-use Yuanyou\EasySms\Support\Config;
+use Yuanyou\Risk\Support\Config;
 
 /**
  * Class GatewayInterface.
@@ -28,9 +28,9 @@ interface GatewayInterface
     /**
      * Send a short message.
      *
-     * @param \Yuanyou\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Yuanyou\EasySms\Contracts\MessageInterface     $message
-     * @param \Yuanyou\EasySms\Support\Config                 $config
+     * @param \Yuanyou\Risk\Contracts\PhoneNumberInterface $to
+     * @param \Yuanyou\Risk\Contracts\MessageInterface     $message
+     * @param \Yuanyou\Risk\Support\Config                 $config
      *
      * @return array
      */

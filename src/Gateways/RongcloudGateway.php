@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Gateways;
+namespace Yuanyou\Risk\Gateways;
 
 use GuzzleHttp\Exception\ClientException;
-use Yuanyou\EasySms\Contracts\MessageInterface;
-use Yuanyou\EasySms\Contracts\PhoneNumberInterface;
-use Yuanyou\EasySms\Exceptions\GatewayErrorException;
-use Yuanyou\EasySms\Support\Config;
-use Yuanyou\EasySms\Traits\HasHttpRequest;
+use Yuanyou\Risk\Contracts\MessageInterface;
+use Yuanyou\Risk\Contracts\PhoneNumberInterface;
+use Yuanyou\Risk\Exceptions\GatewayErrorException;
+use Yuanyou\Risk\Support\Config;
+use Yuanyou\Risk\Traits\HasHttpRequest;
 
 /**
  * Class RongcloudGateway.
@@ -40,13 +40,13 @@ class RongcloudGateway extends Gateway
     const SUCCESS_CODE = 200;
 
     /**
-     * @param \Yuanyou\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Yuanyou\EasySms\Contracts\MessageInterface     $message
-     * @param \Yuanyou\EasySms\Support\Config                 $config
+     * @param \Yuanyou\Risk\Contracts\PhoneNumberInterface $to
+     * @param \Yuanyou\Risk\Contracts\MessageInterface     $message
+     * @param \Yuanyou\Risk\Support\Config                 $config
      *
      * @return array
      *
-     * @throws \Yuanyou\EasySms\Exceptions\GatewayErrorException ;
+     * @throws \Yuanyou\Risk\Exceptions\GatewayErrorException ;
      */
     public function send(PhoneNumberInterface $to, MessageInterface $message, Config $config)
     {
@@ -111,7 +111,7 @@ class RongcloudGateway extends Gateway
      * Generate Sign.
      *
      * @param array                            $params
-     * @param \Yuanyou\EasySms\Support\Config $config
+     * @param \Yuanyou\Risk\Support\Config $config
      *
      * @return string
      */

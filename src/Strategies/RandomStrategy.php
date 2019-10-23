@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Strategies;
+namespace Yuanyou\Risk\Strategies;
 
-use Yuanyou\EasySms\Contracts\StrategyInterface;
+use Yuanyou\Risk\Contracts\StrategyInterface;
 
 /**
  * Class RandomStrategy.

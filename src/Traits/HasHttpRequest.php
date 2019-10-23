@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Traits;
+namespace Yuanyou\Risk\Traits;
 
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;

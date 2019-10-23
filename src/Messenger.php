@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms;
+namespace Yuanyou\Risk;
 
-use Yuanyou\EasySms\Contracts\MessageInterface;
-use Yuanyou\EasySms\Contracts\PhoneNumberInterface;
-use Yuanyou\EasySms\Exceptions\NoGatewayAvailableException;
+use Yuanyou\Risk\Contracts\MessageInterface;
+use Yuanyou\Risk\Contracts\PhoneNumberInterface;
+use Yuanyou\Risk\Exceptions\NoGatewayAvailableException;
 
 /**
  * Class Messenger.
@@ -25,14 +25,14 @@ class Messenger
     const STATUS_FAILURE = 'failure';
 
     /**
-     * @var \Yuanyou\EasySms\Sms
+     * @var \Yuanyou\Risk\Sms
      */
     protected $easySms;
 
     /**
      * Messenger constructor.
      *
-     * @param \Yuanyou\EasySms\Sms $easySms
+     * @param \Yuanyou\Risk\Sms $easySms
      */
     public function __construct(Sms $easySms)
     {
@@ -42,13 +42,13 @@ class Messenger
     /**
      * Send a message.
      *
-     * @param \Yuanyou\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Yuanyou\EasySms\Contracts\MessageInterface     $message
+     * @param \Yuanyou\Risk\Contracts\PhoneNumberInterface $to
+     * @param \Yuanyou\Risk\Contracts\MessageInterface     $message
      * @param array                                            $gateways
      *
      * @return array
      *
-     * @throws \Yuanyou\EasySms\Exceptions\NoGatewayAvailableException
+     * @throws \Yuanyou\Risk\Exceptions\NoGatewayAvailableException
      */
     public function send(PhoneNumberInterface $to, MessageInterface $message, array $gateways = [])
     {

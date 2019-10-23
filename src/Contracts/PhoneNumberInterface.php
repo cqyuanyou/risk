@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms\Contracts;
+namespace Yuanyou\Risk\Contracts;
 
 /**
  * Interface PhoneNumberInterface.

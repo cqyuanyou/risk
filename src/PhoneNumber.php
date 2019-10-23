@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Yuanyou\EasySms;
+namespace Yuanyou\Risk;
 
-use Yuanyou\EasySms\Contracts\PhoneNumberInterface;
+use Yuanyou\Risk\Contracts\PhoneNumberInterface;
 
 /**
  * Class PhoneNumberInterface.
