@@ -24,7 +24,7 @@ use RuntimeException;
 /**
  * Class EasySms.
  */
-class EasySms
+class Sms
 {
     /**
      * @var \Yuanyou\EasySms\Support\Config
