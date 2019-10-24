@@ -35,12 +35,11 @@ class PhoneNumber implements PhoneNumberInterface
         return $this->number;
     }
 
-    /**
-     * @return string
-     */
-    public function __toString()
+    public function __construct($number)
     {
+        $this->number = $number;
     }
+
 
     /**
      * Specify data which should be serialized to JSON.

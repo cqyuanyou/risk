@@ -27,8 +27,4 @@ interface PhoneNumberInterface extends \JsonSerializable
     public function getNumber();
  
 
-    /**
-     * @return string
-     */
-    public function __toString();
 }
