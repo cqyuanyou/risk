@@ -8,7 +8,7 @@ use Yuanyou\Risk\Exceptions\GatewayErrorException;
 use Yuanyou\Risk\Support\Config;
 use Yuanyou\Risk\Traits\HasHttpRequest;
 
-class SmsGateway extends Gateway
+class SmsGateway extends MessageGateway
 {
     use HasHttpRequest;
 

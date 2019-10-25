@@ -25,14 +25,5 @@ interface GatewayInterface
      */
     public function getName();
 
-    /**
-     * Send a short message.
-     *
-     * @param \Yuanyou\Risk\Contracts\PhoneNumberInterface $to
-     * @param \Yuanyou\Risk\Contracts\MessageInterface     $message
-     * @param \Yuanyou\Risk\Support\Config                 $config
-     *
-     * @return array
-     */
-    public function send(PhoneNumberInterface $to, MessageInterface $message, Config $config);
+
 }
