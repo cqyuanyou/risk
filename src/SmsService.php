@@ -65,9 +65,6 @@ class SmsService
     {
         $this->config = new Config($config);
 
-        if (!empty($config['default'])) {
-            $this->setDefaultGateway($config['default']);
-        }
     }
 
     /**
