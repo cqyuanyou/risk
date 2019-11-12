@@ -1,20 +1,10 @@
 <?php
 
-/*
- * This file is part of the yuanyou/easy-sms.
- *
- * (c) yuanyou <wuwanhui@yeah.net>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
 
 namespace Yuanyou\Risk\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Yuanyou\Risk\Message;
-use Yuanyou\Risk\SmsService;
-use Yuanyou\Risk\Strategies\OrderStrategy;
+use Yuanyou\Risk\Risk;
 
 /**
  * Class EasySms.
@@ -25,40 +15,21 @@ class SmsTest extends TestCase
     public function testEat()
     {
         $config = [
-            // HTTP 请求的超时时间（秒）
-            'timeout' => 5.0,
-            // 默认发送配置
-            'default' => [
-                // 网关调用策略，默认：顺序调用
-                'strategy' => OrderStrategy::class,
-
-                // 默认可用的发送网关
-                'gateways' => [
-                    'sms',
-                ],
-            ],
-            // 可用的网关配置
-            'gateways' => [
-                'errorlog' => [
-                    'file' => '/tmp/yuanyou-sms.log',
-                ],
-                'sms' => [
-                    'token' => 'be0c5e4151465c9dcfeb0410401bc6246aac6b619dab0ceb14a1111234ce6e3f',
-                    'secret_key' => 'bc619a86ae754aa5bdbf33c19396fc94',
-                    'sign_id' => 13,
-                ],
-
-            ],
+            'url' => 'http://risk.4255.cn/',
+            'token' => 'b08d2c0f36e6d39cfa2b76f9b9380615c10eb154d606ecafc7d0eff19a44cbc1',
+            'secret_key' => 'fb2be0d575174c0ab3d5ea2912bcda31',
         ];
-        $sms = new SmsService($config);
 
-//        $result = $sms->send('13983087661', [
-//            'content' => '测试内容',
-//            'template' => 33,
-//            'data' => ["code" => 1111]
-//        ]);
 
-        $this->assertEquals('', $sms->getMessenger());
+        $risk = new Risk();
+        $risk->setConfig($config);
+        //短信
+//        $result = $risk->MessageSend('13983087661', 33, ["code" => 1111]);
+//银行卡四要素
+        $result = $risk->CertificationBankFour('吴红', '13983087661',"512322198112204917","6221340013257480");
+        //手机三要素
+//        $result = $risk->CertificationMobileThree('吴红', '13983087661', "512322198112204917");
+        return var_dump($result);
     }
 
 }
