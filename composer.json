@@ -1,16 +1,14 @@
 {
   "name": "yuanyou/risk",
-  "description": "金易控插件1.0",
+  "description": "金易控插件1.3",
   "type": "library",
   "require": {
     "guzzlehttp/guzzle": "^6.2",
-    "phpunit/phpunit": "^5.7 || ^7.5",
     "php": ">=5.6",
     "ext-json": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "^5.7 || ^7.5",
-    "mockery/mockery": "1.2.2"
+
   },
   "autoload": {
     "psr-4": {
@@ -19,8 +17,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Yuanyou\\Risk\\": "src",
-      "Yuanyou\\Risk\\Tests\\": "tests"
+      "Yuanyou\\Risk\\": "src"
     }
   },
   "license": "MIT",
